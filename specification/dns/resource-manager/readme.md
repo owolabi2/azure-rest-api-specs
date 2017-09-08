@@ -17,7 +17,7 @@ These are the global settings for the DNS API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2016-04
+tag: package-2017-09-preview
 ```
 
 
