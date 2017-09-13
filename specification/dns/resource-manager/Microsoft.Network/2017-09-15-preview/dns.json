@@ -1087,32 +1087,22 @@
         "registrationVirtualNetworks": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/VirtualNetwork"
+            "$ref": "#/definitions/SubResource"
           },
-          "description": "List of vnets that register hostnames in this DNS zone. This is a only when ZoneType is Private."
+          "description": "A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private."
         },
         "resolutionVirtualNetworks": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/VirtualNetwork"
+            "$ref": "#/definitions/SubResource"
           },
-          "description": "List of vnets that resolve records in this DNS zone. This is a only when ZoneType is Private."
+          "description": "A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private."
         }
       },
       "required": [
         "zoneType"
       ],
       "description": "Represents the properties of the zone."
-    },
-    "VirtualNetwork": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "VirtualNetwork Id",
-          "type": "string"
-        }
-      },
-      "description": "Object that represents a virtual network"
     },
     "Zone": {
       "properties": {
@@ -1270,7 +1260,7 @@
           "description": "Resource Id."
         }
       },
-      "x-ms-external": true
+      "x-ms-azure-resource": true
     },
     "CloudError": {
       "type": "object",
